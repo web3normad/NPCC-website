@@ -1,5 +1,6 @@
 import { Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
+import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import News from "./pages/News";
 import Publications from "./pages/Publications";
@@ -21,6 +22,7 @@ function App() {
         <Route path="/members-area" element={<MembersArea />} />
         <Route path="*" element={<NotFound />} /> {/* 404 Page */}
       </Routes>
+      <Footer />
     </>
   );
 }

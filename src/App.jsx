@@ -11,19 +11,21 @@ import NotFound from "./pages/NotFound";
 
 function App() {
   return (
-    <>
+    <div className="flex flex-col min-h-screen">
       <Header />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/news" element={<News />} />
-        <Route path="/publications" element={<Publications />} />
-        <Route path="/members" element={<Members />} />
-        <Route path="/events" element={<Events />} />
-        <Route path="/members-area" element={<MembersArea />} />
-        <Route path="*" element={<NotFound />} /> {/* 404 Page */}
-      </Routes>
+      <div className="flex-grow">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/news" element={<News />} />
+          <Route path="/publications" element={<Publications />} />
+          <Route path="/members" element={<Members />} />
+          <Route path="/events" element={<Events />} />
+          <Route path="/members-area" element={<MembersArea />} />
+          <Route path="*" element={<NotFound />} /> {/* 404 Page */}
+        </Routes>
+      </div>
       <Footer />
-    </>
+    </div>
   );
 }
 

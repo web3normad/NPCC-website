@@ -1,52 +1,30 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Search, Menu, X, ChevronDown } from 'lucide-react';
-import Logo from "../assets/images/npcc-logo.png"
+import { Search, Menu, X } from 'lucide-react';
+import Logo from "../assets/images/npcc-logo.png";
 
 const Header = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState(null);
 
   const navigationItems = [
     {
       title: 'About Us',
-      path: '/about',
-      dropdown: [
-        { label: 'History', path: '/about/history' },
-        { label: 'Mission & Vision', path: '/about/mission' },
-        { label: 'Leadership', path: '/about/leadership' },
-        { label: 'Organizational Structure', path: '/about/structure' }
-      ]
+      path: '/about'
     },
     {
       title: 'Our Mandates',
-      path: '/mandates',
-      dropdown: [
-        { label: 'Advocacy', path: '/mandates/advocacy' },
-        { label: 'Advisory', path: '/mandates/advisory' },
-        { label: 'Arbitration', path: '/mandates/arbitration' },
-        { label: 'Consulting', path: '/mandates/consulting' }
-      ]
+      path: '/mandates'
     },
     {
       title: 'Services',
-      path: '/services',
-      dropdown: [
-        { label: 'Research & Analysis', path: '/services/research' },
-        { label: 'Consulting Services', path: '/services/consulting' },
-        { label: 'Advisory Services', path: '/services/advisory' }
-      ]
+      path: '/services'
     },
     {
       title: 'Resources',
-      path: '/resources',
-      dropdown: [
-        { label: 'Industry Reports', path: '/resources/reports' },
-        { label: 'Publications', path: '/resources/publications' },
-        { label: 'Guidelines', path: '/resources/guidelines' }
-      ]
+      path: '/resources'
     }
   ];
+  
 
   return (
     <div className="relative">
@@ -71,47 +49,20 @@ const Header = () => {
             <div className="hidden lg:flex items-center space-x-8">
               {/* Main Navigation Items */}
               <div className="flex space-x-6">
+                <Link 
+                  to="/"
+                  className="text-gray-700 hover:text-[#7cc3a1] py-2"
+                >
+                  Home
+                </Link>
                 {navigationItems.map((item) => (
-                  <div 
+                  <Link 
                     key={item.title}
-                    className="relative group"
+                    to={item.path}
+                    className="text-gray-700 hover:text-[#7cc3a1] py-2"
                   >
-                    <button 
-                      className="flex items-center space-x-1 text-gray-700 hover:text-[#7cc3a1] py-2 focus:outline-none"
-                      onClick={() => setActiveDropdown(activeDropdown === item.title ? null : item.title)}
-                      onMouseEnter={() => setActiveDropdown(item.title)}
-                    >
-                      <span>{item.title}</span>
-                      <ChevronDown size={16} />
-                    </button>
-                    
-                    {/* Dropdown Menu with hover area */}
-                    {activeDropdown === item.title && (
-                      <>
-                        {/* Invisible hover bridge */}
-                        <div 
-                          className="absolute -bottom-2 left-0 h-2 w-full"
-                          onMouseEnter={() => setActiveDropdown(item.title)}
-                        />
-                        <div 
-                          className="absolute left-0 mt-2 w-48 bg-white border rounded-md shadow-lg py-1 z-50"
-                          onMouseEnter={() => setActiveDropdown(item.title)}
-                          onMouseLeave={() => setActiveDropdown(null)}
-                        >
-                          {item.dropdown.map((dropdownItem) => (
-                            <Link
-                              key={dropdownItem.path}
-                              to={dropdownItem.path}
-                              className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                              onClick={() => setActiveDropdown(null)}
-                            >
-                              {dropdownItem.label}
-                            </Link>
-                          ))}
-                        </div>
-                      </>
-                    )}
-                  </div>
+                    {item.title}
+                  </Link>
                 ))}
               </div>
 
@@ -119,7 +70,7 @@ const Header = () => {
               <div className="flex items-center space-x-4">
                 <Link
                   to="/members-area"
-                  className="px-4 py-2 text-[#7cc3a1] border-2 border-[#7cc3a1]  hover:bg-[#7cc3a1] hover:text-white transition-colors"
+                  className="px-4 py-2 text-[#7cc3a1] border-2 border-[#7cc3a1] hover:bg-[#7cc3a1] hover:text-white transition-colors"
                 >
                   Members' Area
                 </Link>
@@ -163,6 +114,15 @@ const Header = () => {
 
             {/* Mobile Navigation Items */}
             <div className="py-4">
+              <div className="px-4">
+                <Link
+                  to="/"
+                  className="block py-2 text-gray-700 hover:text-[#7cc3a1]"
+                  onClick={() => setIsSidebarOpen(false)}
+                >
+                  Home
+                </Link>
+              </div>
               {navigationItems.map((item) => (
                 <div key={item.title} className="px-4">
                   <Link
@@ -172,18 +132,6 @@ const Header = () => {
                   >
                     {item.title}
                   </Link>
-                  <div className="pl-4 space-y-1">
-                    {item.dropdown.map((dropdownItem) => (
-                      <Link
-                        key={dropdownItem.path}
-                        to={dropdownItem.path}
-                        className="block py-1 text-sm text-gray-600 hover:text-[#7cc3a1]"
-                        onClick={() => setIsSidebarOpen(false)}
-                      >
-                        {dropdownItem.label}
-                      </Link>
-                    ))}
-                  </div>
                 </div>
               ))}
               <div className="px-4 mt-4">

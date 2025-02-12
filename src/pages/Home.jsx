@@ -63,61 +63,51 @@ const Home = () => {
 
         {/* Bottom Four Cards */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 mt-6 md:mt-10">
-          <div className="bg-gray-100 p-4 md:p-6 shadow-md">
-            <h3 className="text-red-600 font-semibold text-sm">
-              NEWS 17 JANUARY 2025
-            </h3>
-            <h2 className="font-bold text-md mt-2">
-              Nigerian Ports Implement Digital Customs Clearance
-            </h2>
-            <p className="mt-2 text-sm">
-              The Nigerian Ports Authority (NPA) has rolled out an AI-driven
-              clearance system to enhance efficiency.
-            </p>
-          </div>
-          <div className="bg-gray-100 p-4 md:p-6 shadow-md">
-            <h3 className="text-red-600 font-semibold text-sm">
-              NEWS 07 JANUARY 2025
-            </h3>
-            <h2 className="font-bold text-md mt-2">
-              Lagos Port Expansion Project Nears Completion
-            </h2>
-            <p className="mt-2 text-sm">
-              The multi-billion naira investment aims to boost trade capacity
-              and reduce congestion.
-            </p>
-          </div>
-          <div className="bg-gray-100 p-4 md:p-6 shadow-md">
-            <h3 className="text-red-600 font-semibold text-sm">
-              NEWS 24 OCTOBER 2024
-            </h3>
-            <h2 className="font-bold text-md mt-2">
-              Nigeria Cracks Down on Illegal Maritime Activities
-            </h2>
-            <p className="mt-2 text-sm">
-              Authorities have seized multiple unauthorized vessels operating in
-              restricted waters.
-            </p>
-          </div>
-          <div className="bg-gray-100 p-4 md:p-6 shadow-md">
-            <h3 className="text-red-600 font-semibold text-sm">
-              NEWS 15 OCTOBER 2024
-            </h3>
-            <h2 className="font-bold text-md mt-2">
-              Women in Maritime: Nigeria Launches New Initiative
-            </h2>
-            <p className="mt-2 text-sm">
-              A new program aims to increase female participation in Nigeria's
-              maritime sector.
-            </p>
-          </div>
-        </div>
+  <div className="bg-gray-100 p-4 md:p-6 shadow-md">
+    <h3 className="text-red-600 font-semibold text-sm">NEWS 04 FEBUARY 2025</h3>
+    <h2 className="font-bold text-md mt-2">
+      <a href="https://dailytrend.com.ng/2025/02/04/npcc-unveils-strategic-framework-to-drive-national-single-window-efficiency-in-nigerian-ports/" target="_blank"  className="text-blue-600 underline">NPCC Unveils Strategic Framework to Drive National Single Window Efficiency in Nigerian Ports</a>
+    </h2>
+    <p className="mt-2 text-sm">
+    The Nigerian Ports Consultative Council (NPCC) has proposed a workable spectrum of processes with specific solutions capable of driving the National Single Window(NSW) project for efficiency in the nation’s port operations.
+    </p>
+  </div>
+  <div className="bg-gray-100 p-4 md:p-6 shadow-md">
+    <h3 className="text-red-600 font-semibold text-sm">NEWS 26 DECEMBER 2024</h3>
+    <h2 className="font-bold text-md mt-2">
+      <a href="https://punchng.com/ports-council-plans-databank-for-maritime-sector/" target="_blank"  className="text-blue-600 underline">Ports council plans databank for maritime sector</a>
+    </h2>
+    <p className="mt-2 text-sm">
+    The Nigerian Ports Consultative Council has concluded plans to create a database as custodian of Nigerian port industry statistics.
+    </p>
+  </div>
+  <div className="bg-gray-100 p-4 md:p-6 shadow-md">
+    <h3 className="text-red-600 font-semibold text-sm">NEWS 07 OCTOBER 2024</h3>
+    <h2 className="font-bold text-md mt-2">
+      <a href="https://onepageafrica.com/tag/nigerian-port-consultative-council/" target="_blank" className="text-blue-600 underline" >Nigerian Ports Consultative Council appoints Jean Chiazor Anishere as Vice Chairperson</a>
+    </h2>
+    <p className="mt-2 text-sm">
+    Mrs. Jean Chiazor Anishere, a Senior Advocate of Nigeria and  Principal Partner, Jean Chiazor and Partners, has been appointed as the Vice Chairperson of  the Nigerian Ports Consultative Council (NPCC).
+    </p>
+  </div>
+  <div className="bg-gray-100 p-4 md:p-6 shadow-md">
+    <h3 className="text-red-600 font-semibold text-sm">NEWS 07 OCTOBER 2024</h3>
+    <h2 className="font-bold text-md mt-2">
+      <a href="https://onepageafrica.com/tag/nigerian-port-consultative-council/" target="_blank" className="text-blue-600 underline" >NPCC to establish research and development department</a>
+    </h2>
+    <p className="mt-2 text-sm">
+    The Nigerian Port Consultative Council (NPCC) has disclosed plans to establish a dedicated Research and Development Department to enhance the efficiency and productivity at the nation’s seaports.
+    </p>
+  </div>
+</div>
 
         {/* Read All News Button */}
         <div className="flex justify-center mt-8 md:mt-10">
+          <a href="https://onepageafrica.com/tag/nigerian-port-consultative-council/" target="_blank">
           <button className="w-full md:w-auto border-2 border-[#7cc3a1] text-[#7cc3a1] px-6 py-2 hover:bg-[#7cc3a1] hover:text-white transition-all">
             Read all news
           </button>
+          </a>
         </div>
       </div>
 
